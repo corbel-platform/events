@@ -2,6 +2,9 @@ package io.corbel.event;
 
 import io.corbel.eventbus.EventWithSpecificDomain;
 
+/**
+ * @author Alberto J. Rubio
+ */
 public class ScopeUpdateEvent extends EventWithSpecificDomain {
 
     public enum Action {
