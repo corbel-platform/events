@@ -96,4 +96,9 @@ public class EventSerializationTest {
         assertThanCanBeSendAndRetriveInEventBus(new DeviceEvent(DeviceEvent.Type.CREATED, "DOMAIN", "DEVICEID", "USERID", "DEVICETYPE", "DEVICENAME"));
     }
 
+    @Test
+    public void testDomainPublicScopesNotPublishedEvent() {
+        assertThanCanBeSendAndRetriveInEventBus(new DomainPublicScopesNotPublishedEvent());
+    }
+
 }
