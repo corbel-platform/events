@@ -98,7 +98,7 @@ public class EventSerializationTest {
 
     @Test
     public void testDomainPublicScopesNotPublishedEvent() {
-        assertThanCanBeSendAndRetriveInEventBus(new DomainPublicScopesNotPublishedEvent());
+        assertThanCanBeSendAndRetriveInEventBus(new DomainPublicScopesNotPublishedEvent("DOMAIN"));
     }
 
 }
