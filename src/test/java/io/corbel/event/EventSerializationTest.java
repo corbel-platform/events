@@ -1,9 +1,12 @@
 package io.corbel.event;
 
 import static org.fest.assertions.api.Assertions.assertThat;
+import io.corbel.eventbus.Event;
 
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
 
 import org.fest.util.Sets;
 import org.junit.Before;
@@ -14,7 +17,6 @@ import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JSR310Module;
-import io.corbel.eventbus.Event;
 
 
 /**
@@ -92,8 +94,15 @@ public class EventSerializationTest {
     }
 
     @Test
+    public void testUserModifiedEvent() {
+        assertThanCanBeSendAndRetriveInEventBus(new UserAuthorizedEvent("domainId", "userId", "email", "username", "firstName",
+                "lastName", "profileUrl", "phoneNumber", "country", new HashMap(), new HashSet(), new HashSet()));
+    }
+
+    @Test
     public void testDeviceEvent() {
-        assertThanCanBeSendAndRetriveInEventBus(new DeviceEvent(DeviceEvent.Type.CREATED, "DOMAIN", "DEVICEID", "USERID", "DEVICETYPE", "DEVICENAME"));
+        assertThanCanBeSendAndRetriveInEventBus(new DeviceEvent(DeviceEvent.Type.CREATED, "DOMAIN", "DEVICEID", "USERID", "DEVICETYPE",
+                "DEVICENAME"));
     }
 
     @Test
