@@ -3,7 +3,7 @@
 
     <groupId>io.corbel</groupId>
     <artifactId>events</artifactId>
-    <version>1.25.0</version>
+    <version>1.25.1-SNAPSHOT</version>
 
     <name>events</name>
 
@@ -31,7 +31,7 @@
         <connection>scm:git:ssh://bq-devtools@git.dev.bqsoftware.net:29418/events</connection>
         <developerConnection>scm:git:ssh://bq-devtools@git.dev.bqsoftware.net:29418/events</developerConnection>
         <url>https://github.com/corbel-platform/events</url>
-        <tag>events-1.25.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
