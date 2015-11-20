@@ -95,7 +95,7 @@ public class EventSerializationTest {
 
     @Test
     public void testUserModifiedEvent() {
-        assertThanCanBeSendAndRetriveInEventBus(new UserAuthorizedEvent("domainId", "userId", "email", "username", "firstName",
+        assertThanCanBeSendAndRetriveInEventBus(new UserAuthenticationEvent("domainId", "userId", "email", "username", "firstName",
                 "lastName", "profileUrl", "phoneNumber", "country", new HashMap(), new HashSet(), new HashSet()));
     }
 

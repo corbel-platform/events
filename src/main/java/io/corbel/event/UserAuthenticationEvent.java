@@ -7,20 +7,20 @@ import java.util.Set;
  * @author Rubén Carrasco
  *
  */
-public class UserAuthorizedEvent extends UserEvent {
+public class UserAuthenticationEvent extends UserEvent {
 
-    public UserAuthorizedEvent() {
+    public UserAuthenticationEvent() {
 
     }
 
-    public UserAuthorizedEvent(String domainId, String userId, String email, String username, String firstName, String lastName,
+    public UserAuthenticationEvent(String domainId, String userId, String email, String username, String firstName, String lastName,
             String profileUrl, String phoneNumber, String country, Map<String, Object> properties, Set<String> scopes, Set<String> groups) {
         super(domainId, userId, email, username, firstName, lastName, profileUrl, phoneNumber, country, properties, scopes, groups);
     }
 
     @Override
     public UserEventType getType() {
-        return UserEventType.AUTHORIZATION;
+        return UserEventType.AUTHENTICATION;
     }
 
 }

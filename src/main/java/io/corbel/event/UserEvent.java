@@ -241,7 +241,7 @@ public abstract class UserEvent extends EventWithSpecificDomain {
 
 
     public enum UserEventType {
-        CREATION, MODIFICATION, AUTHORIZATION
+        CREATION, MODIFICATION, AUTHENTICATION
     }
 
 }
