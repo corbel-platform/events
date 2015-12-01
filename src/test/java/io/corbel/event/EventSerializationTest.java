@@ -90,7 +90,7 @@ public class EventSerializationTest {
 
     @Test
     public void testUserDeletedEvent() {
-        assertThanCanBeSendAndRetriveInEventBus(new UserDeletedEvent("USER_ID", "DOMAIN"));
+        assertThanCanBeSendAndRetriveInEventBus(new UserDeletedEvent("USER_ID", "FIRST_NAME","LAST_NAME","EMAIL@EMAIL.COM", "DOMAIN"));
     }
 
     @Test
