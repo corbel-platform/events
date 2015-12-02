@@ -5,6 +5,8 @@ import io.corbel.eventbus.EventWithSpecificDomain;
 import java.util.Map;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * @author Alberto J. Rubio
  */
@@ -127,6 +129,7 @@ public abstract class UserEvent extends EventWithSpecificDomain {
         this.groups = groups;
     }
 
+    @JsonIgnore
     public abstract UserEventType getType();
 
     @Override
