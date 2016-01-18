@@ -1,11 +1,11 @@
 package io.corbel.event;
 
-import io.corbel.eventbus.Event;
+import io.corbel.eventbus.EventWithSpecificDomain;
 
 /**
  * @author Cristian del Cerro
  */
-public class EvciEvent implements Event {
+public class EvciEvent extends EventWithSpecificDomain {
     private String type;
     private String data;
 
@@ -34,17 +34,21 @@ public class EvciEvent implements Event {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
+        if (this == o) {
             return true;
-        if (!(o instanceof EvciEvent))
+        }
+        if (!(o instanceof EvciEvent)) {
             return false;
+        }
 
         EvciEvent evciEvent = (EvciEvent) o;
 
-        if (data != null ? !data.equals(evciEvent.data) : evciEvent.data != null)
+        if (data != null ? !data.equals(evciEvent.data) : evciEvent.data != null) {
             return false;
-        if (type != null ? !type.equals(evciEvent.type) : evciEvent.type != null)
+        }
+        if (type != null ? !type.equals(evciEvent.type) : evciEvent.type != null) {
             return false;
+        }
 
         return true;
     }
