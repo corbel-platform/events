@@ -37,7 +37,7 @@
     <dependency>
       <groupId>io.corbel</groupId>
       <artifactId>event-bus</artifactId>
-      <version>1.26.0</version>
+      <version>1.27.1</version>
     </dependency>
     <dependency>
       <groupId>com.google.code.gson</groupId>
